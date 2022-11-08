@@ -1,3 +1,4 @@
+##Change
 CREATE OR REPLACE TABLE `dw-bq-data-d00.SANDBOX_ANALYTICS.TTS_Production`
 as
 select
