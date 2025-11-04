@@ -1,0 +1,15 @@
+[MASTER]
+ignore=CVS,.git,__pycache__,.venv,venv,notebooks
+
+[MESSAGES CONTROL]
+disable=C0330,C0326,too-few-public-methods,missing-module-docstring
+
+[FORMAT]
+max-line-length=100
+
+[BASIC]
+good-names=i,j,k,df,X,y,e,_
+
+[DESIGN]
+max-args=7
+max-attributes=10

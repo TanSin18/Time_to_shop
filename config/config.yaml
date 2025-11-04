@@ -1,0 +1,49 @@
+# Time to Shop Configuration File
+# This file contains default configuration values.
+# Environment variables will override these settings.
+
+# Google Cloud Platform
+gcp:
+  project_id: null  # Set via GCP_PROJECT_ID env var
+  credentials_path: null  # Set via GCP_CREDENTIALS_PATH env var
+
+# BigQuery Settings
+bigquery:
+  dataset: SANDBOX_ANALYTICS
+  input_table: TTS_Production
+  output_table: time_to_shop
+
+# Model Settings
+model:
+  path: finalized_model.sav
+  type: ExtraTreesClassifier
+
+# Feature Engineering
+features:
+  # List of features used for prediction
+  - SALES_6M
+  - FREQUENCY_6M
+  - BUYS_Q_03
+  - COUPON_Q_03
+  - PH_MREDEEM90D
+  - PH_PFREQ90D
+  - PH_CFREQ90D
+  - BBB_INSTORE_RFM_DECILE
+  - BBB_ECOM_R_DECILE
+  - BBB_OFFCOUPON_RFM_DECILE
+  - NUM_PERIODS
+  - NUM_PRODUCT_GROUPS
+  - PRESENCE_OF_CHILD
+  - MARITAL_STAT
+
+# Data Preprocessing
+preprocessing:
+  fill_values:
+    decile: 11
+    recency: 366
+    default: 0
+
+# Logging
+logging:
+  level: INFO
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"

@@ -127,3 +127,25 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Project-specific
+*.sav
+*.pkl
+*.joblib
+d00_key.json
+*credentials*.json
+predictions_output.csv
+*.csv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+
+# Pre-commit
+.pre-commit-config.yaml.bak
